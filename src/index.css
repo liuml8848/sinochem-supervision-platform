@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* shadcn/ui design tokens - based on Demo extraction */
+    --background: 220 33% 98%;
+    --foreground: 220 40% 16%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 40% 16%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 40% 16%;
+    --primary: 203 90% 59%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 20% 94%;
+    --secondary-foreground: 220 40% 16%;
+    --muted: 220 20% 94%;
+    --muted-foreground: 215 25% 60%;
+    --accent: 203 90% 59%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 13% 90%;
+    --input: 220 13% 90%;
+    --ring: 203 90% 59%;
+    --radius: 0.5rem;
+    --chart-1: 203 90% 59%;
+    --chart-2: 170 69% 50%;
+    --chart-3: 43 94% 50%;
+    --chart-4: 0 84% 60%;
+    --chart-5: 262 83% 63%;
+    --chart-6: 25 95% 53%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  #root {
+    min-height: 100vh;
+  }
+}
+
+@layer utilities {
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(139, 164, 199, 0.3) transparent;
+  }
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: rgba(139, 164, 199, 0.3);
+    border-radius: 3px;
+  }
+}
